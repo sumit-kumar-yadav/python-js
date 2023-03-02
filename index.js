@@ -2,11 +2,11 @@ const { spawn } = require('child_process');
 
 // const childPython = spawn('python', ['--version']);
 
-const childPython = spawn('python', ['python.py']);
-// const childPython = spawn('python', ['python.py', 'Sumit']);
+// const childPython = spawn('python', ['python.py']);
+const childPython = spawn('python', ['python.py', 'Sumit']);
 
 childPython.stdout.on('data', (data) => {
-    console.log(`stdout: ${data}`);
+    console.log(`stdout: ${data} ??`);
 })
 
 childPython.stderr.on('data', (data) => {
